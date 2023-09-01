@@ -17,7 +17,7 @@ openAiObjective.get("/Objective/:section", async (req, res) => {
     messages: [
       {
         role: "user",
-        content: `Could you please provide me with 5 multiple-choice questions related to ${section}? Each question should be presented in a numbered format and be followed by 4 potential answer options labelled A, B, C, and D. In addition to this, the correct answer should be given in the line immediately following the list of options.
+        content: `May I request 5 multiple-choice questions pertaining to ${section}? Please format each question with a number and provide 4 answer options labeled A, B, C, and D. Additionally, include the correct answer immediately following the options."
   
           For example, it might look something like this:
           Which of the following is a primitive data type in JavaScript?

@@ -15,12 +15,12 @@ openAiFeedback.post("/feedback", async (req, res) => {
   if (!Answer) {
     res.send({
       content:
-        "You have not answered this question Please answer and then try again.",
+        "You haven't provided an answer. Please answer the question and try again.",
     });
-  } else if (Answer.length <= 40) {
+  } else if (Answer.length <= 50) {
     res.send({
       content:
-        "Your answer is too short for feedback. Please provide answer between 60 to 200 words.",
+        "Your answer is too short for feedback. Please provide an answer between 50 to 200 words.",
     });
   } else {
     const chat_completion = await openai.createChatCompletion({
@@ -28,7 +28,7 @@ openAiFeedback.post("/feedback", async (req, res) => {
       messages: [
         {
           role: "user",
-          content: `Please provide your feedback on the answer to the question: '${Question}'. Answer: '${Answer}'. In 2 lines, please share your feedback. On a scale of 1 to 10 in another line using /n, how would you rate this answer? `,
+          content: `Please provide your feedback on the answer to the question: '${Question}'\n\nAnswer: '${Answer}'\n\nIn 2-3 sentences, share your feedback on the answer's quality, clarity, and relevance. Then, on a scale of 1 to 10, rate the answer's overall effectiveness.`,
         },
       ],
     });
