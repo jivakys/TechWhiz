@@ -8,7 +8,6 @@ const {
 } = require("./Routes/openaiRoutes/objectivetypequestions");
 const { OpenAiQuestion } = require("./Routes/openaiRoutes/questions");
 const { openAiFeedback } = require("./Routes/openaiRoutes/feedback");
-// const { connection } = require("./Connection/db");
 
 const app = express();
 app.use(cors());
@@ -26,7 +25,6 @@ app.use("/Openai", openAiFeedback);
 
 app.listen(process.env.PORT, async () => {
   try {
-    // await connection;
     console.log("Server is Running");
   } catch (error) {
     console.log(error);

@@ -1,8 +1,7 @@
 const express = require("express");
 const openAiFeedback = express.Router();
 const { Configuration, OpenAIApi } = require("openai");
-const { config } = require("dotenv");
-config();
+require("dotenv").config();
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAPI_KEY,
@@ -20,7 +19,7 @@ openAiFeedback.post("/feedback", async (req, res) => {
   } else if (Answer.length <= 50) {
     res.send({
       content:
-        "Your answer is too short for feedback. Please provide an answer between 50 to 200 words.",
+        "Your answer is too short for feedback. Please provide an answer between 51 to 200 words.",
     });
   } else {
     const chat_completion = await openai.createChatCompletion({
