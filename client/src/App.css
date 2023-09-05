@@ -1,0 +1,30 @@
+.main-content {
+  /* width: 95%; */
+  /* border: 2px solid black; */
+  height: 70vh;
+}
+
+.btn {
+  background-color: #3aa6b9;
+  color: white;
+  margin-right: 10px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.fx {
+  display: flex;
+  border: 3px solid red;
+}
+.fx div:nth-child(1) {
+  border: 2px solid black;
+  flex: 1;
+}
+
+.fx div:nth-child(2) {
+  border: 2px solid teal;
+  flex: 1.5;
+}
