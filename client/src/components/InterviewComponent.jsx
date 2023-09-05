@@ -9,8 +9,6 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import "../App.css";
-import Countdown from "./Countdown";
-import Camerafeed from "./Camerafeed";
 const url = "http://localhost:3456/Openai/";
 const fetchData = async (url, param) => {
   const token = JSON.parse(localStorage.getItem("token"));
@@ -131,7 +129,6 @@ export default function InterviewComponent() {
 
   return (
     <>
-      {/* <ScreenShare /> */}
       {loading ? (
         <div>
           <Rings
