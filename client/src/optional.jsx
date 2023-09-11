@@ -7,30 +7,7 @@ function Home() {
     navigate("/UserDashboard", { replace: true });
   });
 
-  return (
-    <h1>Hello</h1>
-    <div className="flex flex-col justify-center items-center h-screen gap-10 ">
-      <div className="text-center">
-        <h1 className="text-5xl mb-2">
-          welcome to{" "}
-          <b className="text-6xl" style={{ color: "#7B8FA1" }}>
-            TechWhiz
-          </b>
-        </h1>
-        <p>
-          {" "}
-          <i>
-            Unlocking Your Potential : AI-Powered Interviews for Success
-          </i>{" "}
-        </p>
-      </div>
-      <div>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
-          <Link to="/UserDashboard">UserDashBoard</Link>
-        </button>
-      </div>
-    </div>
-  );
+  return <h1></h1>;
 }
 
 export default Home;
